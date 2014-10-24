@@ -53,7 +53,7 @@ void Player::setViewPointByPlayer()
 	float x = std::max(spritePos.x, visibleSize.width / 2);
 	float y = std::max(spritePos.y, visibleSize.height / 2);
 
-
+	//如果x,y的坐标大于右上角的极限值，则取极限值的坐标（极限值是指不让地图超出屏幕造成出现黑边的极限坐标）
 	x = std::min(x, mapSize.width - visibleSize.width / 2);
 	y = std::min(y, mapSize.height - visibleSize.height / 2);
 
