@@ -54,6 +54,9 @@
     <ClCompile Include="..\Classes\SimpleMoveController.cpp">
       <Filter>跑跑跑\控制器</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\ThreeDirectionController.cpp">
+      <Filter>跑跑跑\控制器</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -84,6 +87,9 @@
       <Filter>跑跑跑\控制器</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\SimpleMoveController.h">
+      <Filter>跑跑跑\控制器</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\ThreeDirectionController.h">
       <Filter>跑跑跑\控制器</Filter>
     </ClInclude>
   </ItemGroup>
