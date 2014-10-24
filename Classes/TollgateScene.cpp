@@ -1,6 +1,7 @@
 #include "TollgateScene.h"
 #include "Player.h"
 #include "SimpleMoveController.h"
+#include "ThreeDirectionController.h"
 
 Scene* TollgateScene::createScene()
 {
@@ -71,7 +72,11 @@ void TollgateScene::addPlayer(TMXTiledMap* map)
 
 	pPlayer->setPosition(Point(playerX,playerY));
 
-	/*	创建玩家简单移动控制器 */
+	
+
+
+
+	/*	创建玩家简单移动控制器 
 	SimpleMoveController* simpleMoveController = SimpleMoveController::create();
 
     //设置移动速度
@@ -79,9 +84,22 @@ void TollgateScene::addPlayer(TMXTiledMap* map)
 
 	//控制器要添加到场景中才能让update被调用
 	this->addChild(simpleMoveController);
-
 	//设置控制器到主角身上
 	pPlayer->setController(simpleMoveController);
+	*/
+
+
+	ThreeDirectionController* threeMoveControll = ThreeDirectionController::create();
+	threeMoveControll->setiXSpeed(1);
+	threeMoveControll->setiYSpeed(0);
+
+	this->addChild(threeMoveControll);
+
+	pPlayer->setController(threeMoveControll);
+
+
+
+
 
 	
 }
