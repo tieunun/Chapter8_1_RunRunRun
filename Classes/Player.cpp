@@ -4,6 +4,7 @@
 
 bool Player::init()
 {
+	isJumping = false;
    return true;
 }
 
@@ -19,6 +20,9 @@ void Player::run()
 void Player::setTiledMap(TMXTiledMap* map)
 {
 	this->m_map = map;
+
+	this->meta = m_map->getLayer("meta");
+	this->meta->setVisible(true);
 }
 
 
@@ -73,8 +77,93 @@ void Player::setViewPointByPlayer()
 
 void Player::setTagPosition(int x, int y)
 {
+	
+	//判断前面是否不可通行
+    //取主角前方的坐标
+	Size spriteSize = m_sprite->getContentSize();
+
+	Point dstPos = Point(x + spriteSize.width / 2,y);
+
+	//获取当前主角前方坐标在地图中的格子位置
+	Point tiledPos = titleCoordForPosition(Point(dstPos.x, dstPos.y));
+
+	//获取地图格子的唯一标识
+	int titledGid = meta->getTileGIDAt(tiledPos);
+
+	//不为0，代表存在这个格子
+	if (titledGid != 0)
+	{
+		Value properties = m_map->getPropertiesForGID(titledGid);
+
+		ValueMap propertiesMap = properties.asValueMap();
+
+		if (propertiesMap.find("Collidable") != propertiesMap.end())
+		{
+
+			Value prop = propertiesMap.at("Collidable");
+
+			if (prop.asString().compare("true") == 0 && isJumping == false)
+			{
+				isJumping = true;
+
+				auto jumpBy = JumpBy::create(0.5f,Point(-100,0),80,1);
+				CallFunc* callfunc = CallFunc::create([&](){
+					isJumping = false;
+				});
+
+				auto acitons = Sequence::create(jumpBy,callfunc,NULL);
+				this->runAction(acitons);
+			}
+
+
+		
+		}
+
+		if (propertiesMap.find("food") != propertiesMap.end())
+		{
+			Value prop = properties.asValueMap().at("food");
+			if (prop.asString().compare("true") == 0)
+			{
+				TMXLayer* barrier = m_map->getLayer("barrier");
+				barrier->removeTileAt(tiledPos);
+			}
+		}
+
+
+
+	}
+
+
+
+
+
 	Entity::setTagPosition(x,y);
 
 	//以主角为中心移动地图
 	setViewPointByPlayer();
+}
+
+
+Point Player::titleCoordForPosition(Point pos)
+{
+	Size mapTiledNum = m_map->getMapSize();
+
+	Size titledSize = m_map->getTileSize();
+
+	int x = pos.x / titledSize.width;
+
+	//cocoss2d-x 的默认Y坐标是由下至上的，所以要做一个相减的操作
+	int y = (700 - pos.y) / titledSize.height;
+
+	//格子坐标从零开始计算
+	if (x > 0)
+	{
+		x -= 1;
+	}
+	if (y > 0)
+	{
+		y -= 0;
+	}
+
+	return Point(x, y);
 }

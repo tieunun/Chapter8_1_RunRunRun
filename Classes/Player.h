@@ -18,6 +18,17 @@ public:
 
 private:
 	TMXTiledMap* m_map;
+
+
+private:
+	//判断主角是否碰撞了障碍物，在反弹中
+	bool isJumping;
+
+	//检测碰撞的地图层
+	TMXLayer* meta;
+
+	//将像素坐标转化为地图格子坐标
+	Point titleCoordForPosition(Point pos);
 };
 
 
