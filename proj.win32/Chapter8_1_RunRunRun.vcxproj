@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{F9A064DD-45B1-49CB-8904-7841B992D193}</ProjectGuid>
+    <ProjectGuid>{20F49918-4663-4DD4-B105-A987F5282267}</ProjectGuid>
     <RootNamespace>test_win32</RootNamespace>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>
@@ -133,13 +133,26 @@ xcopy /Y /Q "$(EngineRoot)external\websockets\prebuilt\win32\*.*" "$(OutDir)"</C
     </PreLinkEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\Classes\AnimationUtil.cpp" />
     <ClCompile Include="..\Classes\AppDelegate.cpp" />
+    <ClCompile Include="..\Classes\Controller.cpp" />
+    <ClCompile Include="..\Classes\Entity.cpp" />
     <ClCompile Include="..\Classes\HelloWorldScene.cpp" />
+    <ClCompile Include="..\Classes\Player.cpp" />
+    <ClCompile Include="..\Classes\SimpleMoveController.cpp" />
+    <ClCompile Include="..\Classes\TollgateScene.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\Classes\AnimationUtil.h" />
     <ClInclude Include="..\Classes\AppDelegate.h" />
+    <ClInclude Include="..\Classes\Controller.h" />
+    <ClInclude Include="..\Classes\ControllerListener.h" />
+    <ClInclude Include="..\Classes\Entity.h" />
     <ClInclude Include="..\Classes\HelloWorldScene.h" />
+    <ClInclude Include="..\Classes\Player.h" />
+    <ClInclude Include="..\Classes\SimpleMoveController.h" />
+    <ClInclude Include="..\Classes\TollgateScene.h" />
     <ClInclude Include="main.h" />
   </ItemGroup>
   <ItemGroup>

@@ -1,0 +1,31 @@
+﻿生成启动时间为 2014/10/24 19:15:01。
+     1>项目“E:\Cocos2dStudy\HelloWorld\Chapter8_1_RunRunRun\proj.win32\Chapter8_1_RunRunRun.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /IE:\Cocos2dStudy\HelloWorld\cocos2d\cocos\2d\..\..\cocos\audio\include /IE:\Cocos2dStudy\HelloWorld\cocos2d\cocos\2d\..\..\external /IE:\Cocos2dStudy\HelloWorld\cocos2d\cocos\2d\..\..\external\chipmunk\include\chipmunk /IE:\Cocos2dStudy\HelloWorld\cocos2d\cocos\2d\..\..\extensions /I..\Classes /I.. /IE:\Cocos2dStudy\HelloWorld\cocos2d\cocos\2d\..\..\cocos /IE:\Cocos2dStudy\HelloWorld\cocos2d\cocos\2d\..\..\cocos\platform\win32 /IE:\Cocos2dStudy\HelloWorld\cocos2d\cocos\2d\..\..\cocos\platform\desktop /IE:\Cocos2dStudy\HelloWorld\cocos2d\cocos\2d\..\..\external\glfw3\include\win32 /I"E:\Cocos2dStudy\HelloWorld\cocos2d\cocos\2d\..\..\external\win32-specific\gles\include\OGLES" /ZI /nologo /W3 /WX- /MP /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USE_MATH_DEFINES /D GL_GLEXT_PROTOTYPES /D CC_ENABLE_CHIPMUNK_INTEGRATION=1 /D COCOS2D_DEBUG=1 /D _CRT_SECURE_NO_WARNINGS /D _SCL_SECURE_NO_WARNINGS /D _VARIADIC_MAX=10 /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug.win32\\" /Fd"Debug.win32\vc110.pdb" /Gd /TP /wd4267 /wd4251 /wd4244 /analyze- /errorReport:prompt ..\Classes\AppDelegate.cpp
+         AppDelegate.cpp
+     1>e:\cocos2dstudy\helloworld\cocos2d\cocos\base\ccutils.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+       PreLinkEvent:
+         if not exist "E:\Cocos2dStudy\HelloWorld\proj.win32\Debug.win32\" mkdir "E:\Cocos2dStudy\HelloWorld\proj.win32\Debug.win32\"
+         xcopy /Y /Q "E:\Cocos2dStudy\HelloWorld\cocos2d\cocos\2d\..\..\external\websockets\prebuilt\win32\*.*" "E:\Cocos2dStudy\HelloWorld\proj.win32\Debug.win32\"
+         :VCEnd
+         复制了 2 个文件
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Cocos2dStudy\HelloWorld\proj.win32\Debug.win32\Chapter8_1_RunRunRun.exe" /INCREMENTAL /NOLOGO /LIBPATH:E:\Cocos2dStudy\HelloWorld\proj.win32\Debug.win32\ /LIBPATH:E:\Cocos2dStudy\HelloWorld\proj.win32\Debug.win32\ opengl32.lib glew32.lib libzlib.lib libpng.lib libjpeg.lib libtiff.lib libwebp.lib libiconv.lib glfw3.lib freetype250.lib winmm.lib ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\Cocos2dStudy\HelloWorld\proj.win32\Debug.win32\Chapter8_1_RunRunRun.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Cocos2dStudy\HelloWorld\proj.win32\Debug.win32\Chapter8_1_RunRunRun.lib" /MACHINE:X86 /SAFESEH Debug.win32\game.res
+         Debug.win32\AnimationUtil.obj
+         Debug.win32\AppDelegate.obj
+         Debug.win32\Controller.obj
+         Debug.win32\Entity.obj
+         Debug.win32\HelloWorldScene.obj
+         Debug.win32\Player.obj
+         Debug.win32\SimpleMoveController.obj
+         Debug.win32\TollgateScene.obj
+         Debug.win32\main.obj
+         E:\Cocos2dStudy\HelloWorld\proj.win32\Debug.win32\libcocos2d.lib
+         E:\Cocos2dStudy\HelloWorld\proj.win32\Debug.win32\libAudio.lib
+         E:\Cocos2dStudy\HelloWorld\proj.win32\Debug.win32\libchipmunk.lib
+         Chapter8_1_RunRunRun.vcxproj -> E:\Cocos2dStudy\HelloWorld\proj.win32\Debug.win32\Chapter8_1_RunRunRun.exe
+     1>已完成生成项目“E:\Cocos2dStudy\HelloWorld\Chapter8_1_RunRunRun\proj.win32\Chapter8_1_RunRunRun.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:08.64

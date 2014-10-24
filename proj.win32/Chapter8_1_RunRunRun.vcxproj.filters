@@ -10,6 +10,21 @@
     <Filter Include="resource">
       <UniqueIdentifier>{715254bc-d70b-4ec5-bf29-467dd3ace079}</UniqueIdentifier>
     </Filter>
+    <Filter Include="跑跑跑">
+      <UniqueIdentifier>{1ae34582-9329-4ca1-abe6-f67f7e7ac427}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="跑跑跑\控制器">
+      <UniqueIdentifier>{24dc66a7-cfff-4f99-9293-00b03d50e9e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="跑跑跑\实体">
+      <UniqueIdentifier>{c29d29ad-30c0-425f-85ed-d425fa252506}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="跑跑跑\场景">
+      <UniqueIdentifier>{ae92c1e6-3915-45a8-a69a-2948f43d40f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="跑跑跑\动画">
+      <UniqueIdentifier>{72eeea23-6d82-443d-842e-b92f2e3d11d8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -21,6 +36,24 @@
     <ClCompile Include="..\Classes\HelloWorldScene.cpp">
       <Filter>Classes</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\TollgateScene.cpp">
+      <Filter>跑跑跑\场景</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Entity.cpp">
+      <Filter>跑跑跑\实体</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Player.cpp">
+      <Filter>跑跑跑\实体</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\AnimationUtil.cpp">
+      <Filter>跑跑跑\动画</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Controller.cpp">
+      <Filter>跑跑跑\控制器</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\SimpleMoveController.cpp">
+      <Filter>跑跑跑\控制器</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -31,6 +64,27 @@
     </ClInclude>
     <ClInclude Include="..\Classes\HelloWorldScene.h">
       <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\TollgateScene.h">
+      <Filter>跑跑跑\场景</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Entity.h">
+      <Filter>跑跑跑\实体</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Player.h">
+      <Filter>跑跑跑\实体</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\AnimationUtil.h">
+      <Filter>跑跑跑\动画</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Controller.h">
+      <Filter>跑跑跑\控制器</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\ControllerListener.h">
+      <Filter>跑跑跑\控制器</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SimpleMoveController.h">
+      <Filter>跑跑跑\控制器</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
